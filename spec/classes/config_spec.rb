@@ -45,10 +45,10 @@ describe 'solr::config' do
   }
 
   it { should contain_exec('solr-download').with({
-    'command'   =>  'wget http://www.eng.lsu.edu/mirrors/apache/lucene/solr/4.6.0/solr-4.6.0.tgz',
+    'command'   =>  'wget http://apache.crihan.fr/dist/lucene/solr/4.8.0/solr-4.8.0.tgz',
     'cwd'       =>  '/tmp',
     'creates'   =>  '/tmp/solr-4.6.0.tgz',
-    'onlyif'    =>  'test ! -d /usr/share/solr/WEB-INF && test ! -f /tmp/solr-4.6.0.tgz',
+    'onlyif'    =>  'test ! -d /usr/share/solr/WEB-INF && test ! -f /tmp/solr-4.8.0.tgz',
     'timeout'   =>  0,
     'require'   =>  'File[/usr/share/solr]'})  
   }
@@ -57,7 +57,7 @@ describe 'solr::config' do
     'path'      =>  '["/usr/bin", "/usr/sbin", "/bin"]',
     'command'   =>  'tar xzvf solr-4.6.0.tgz',
     'cwd'       =>  '/tmp',
-    'onlyif'    =>  'test -f /tmp/solr-4.6.0.tgz && test ! -d /tmp/solr-4.6.0',
+    'onlyif'    =>  'test -f /tmp/solr-4.6.0.tgz && test ! -d /tmp/solr-4.8.0',
     'require'   =>  'Exec[solr-download]', })
   }
 
