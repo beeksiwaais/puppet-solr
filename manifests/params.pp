@@ -21,7 +21,7 @@ class solr::params {
       $libjetty_extra = false
     }
     'Debian', 'Ubuntu': {
-      $java_package   = 'default-jdk'
+      $java_package   = 'java-1.7.0-openjdk'
       $jetty_package  = 'jetty'
       $libjetty_extra = 'libjetty-extra'
     }
