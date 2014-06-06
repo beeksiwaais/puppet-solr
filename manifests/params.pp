@@ -9,7 +9,7 @@ class solr::params {
 
   $jetty_home     = '/usr/share/jetty'
   $solr_home      = '/usr/share/solr'
-  $solr_version   = '4.8.0'
+  $solr_version   = '4.8.1'
   $cores          = ['default']
   $download_site  = 'http://apache.crihan.fr/dist/lucene/solr'
   $jetty_port     = '8080'
